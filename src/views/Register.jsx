@@ -1,11 +1,12 @@
 import React from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import TextField from "@material-ui/core/TextField";
 
 import {
   Card,
   CardHeader,
-  CardBody,
   CardTitle,
-  Table,
   Button,
   CardFooter,
   Row,
@@ -28,6 +29,7 @@ class Tables extends React.Component {
       eventName: "",
       date: "",
       pillar: "",
+      startDate: new Date(),
     };
     this.toggle = this.toggle.bind(this);
     this.onClickRegister = this.onClickRegister.bind(this);
@@ -44,6 +46,11 @@ class Tables extends React.Component {
 
     this.toggle();
   };
+  handleChange = (date) => {
+    this.setState({
+      startDate: date,
+    });
+  };
 
   render() {
     return (
@@ -59,7 +66,7 @@ class Tables extends React.Component {
                   </p>
                 </CardHeader>
                 <CardFooter>
-                  <Button color="primary" onClick={this.toggle}>
+                  <Button color="success" onClick={this.toggle}>
                     Register
                   </Button>
                 </CardFooter>
@@ -68,7 +75,7 @@ class Tables extends React.Component {
           </Row>
 
           <Modal isOpen={this.state.modal} toggle={this.toggle}>
-            <ModalHeader toggle={this.toggle}>Register Event</ModalHeader>
+            <ModalHeader toggle={this.toggle}>Event Registration</ModalHeader>
             <ModalBody>
               <Form>
                 <FormGroup row>
@@ -76,12 +83,13 @@ class Tables extends React.Component {
                     Event Name
                   </Label>
                   <Col sm={10}>
-                    <Input
-                      type="email"
-                      name="eventName"
-                      id="eventName"
+                    <TextField
                       placeholder="Event Name"
-                      Label="Event Name"
+                      label="Event Name"
+                      variant="outlined"
+                      fullWidth
+                      name="Event Name"
+                      required
                     />
                   </Col>
                 </FormGroup>
@@ -90,35 +98,41 @@ class Tables extends React.Component {
                     Date
                   </Label>
                   <Col sm={10}>
-                    <Input
-                      type="text"
-                      name="date"
-                      id="date"
-                      placeholder="Date"
+                    <DatePicker
+                      selected={this.state.startDate}
+                      onChange={this.handleChange}
                     />
                   </Col>
                 </FormGroup>
                 <FormGroup row>
-                  <Label for="typePillar" sm={2}>
-                    Type Pillar
+                  <Label for="pillarType" sm={2}>
+                    Choose Pillar
                   </Label>
                   <Col sm={10}>
-                    <Input type="select" name="typePillar" id="typePillar">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                    <Input
+                      type="select"
+                      name="pillarType"
+                      id="pillarType"
+                      variant="outlined"
+                    >
+                      <option>Select..</option>
+                      <option>HDXTS</option>
+                      <option>CCM</option>
+                      <option>CPA</option>
+                      <option>ANALYTICS</option>
+                      <option>SCHEDULING</option>
+                      <option>REGISTRATION</option>
+                      <option>HIM</option>
                     </Input>
                   </Col>
                 </FormGroup>
               </Form>
             </ModalBody>
             <ModalFooter>
-              <Button color="primary" onClick={this.onClickRegister}>
+              <Button color="info" onClick={this.onClickRegister}>
                 Register
               </Button>{" "}
-              <Button color="secondary" onClick={this.toggle}>
+              <Button color="danger" onClick={this.toggle}>
                 Cancel
               </Button>
             </ModalFooter>
