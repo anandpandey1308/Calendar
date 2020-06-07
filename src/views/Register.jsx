@@ -1,14 +1,6 @@
 import React from "react";
 
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
-  Table,
-  Row,
-  Col,
-} from "reactstrap";
+import { Card, CardHeader, CardTitle, Row, Col } from "reactstrap";
 
 class Tables extends React.Component {
   render() {
@@ -19,10 +11,11 @@ class Tables extends React.Component {
             <Col md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h4">Register for the Events</CardTitle>
+                  <CardTitle tag="h4">Upload the Events Here</CardTitle>
                   <p className="card-category">
-                    Register/Upload an Event happening for your Pillar.
+                    Upload an Event happening for your Pillar.
                   </p>
+                  <i className="text-right" nc-icon nc-button-play />
                 </CardHeader>
               </Card>
             </Col>
