@@ -12,6 +12,20 @@ var routes = [
     component: Dashboard,
     layout: "/admin",
   },
+  {
+    path: "/register",
+    name: "Register",
+    icon: "nc-icon nc-touch-id",
+    component: Register,
+    layout: "/admin",
+  },
+  {
+    path: "/events",
+    name: "Events",
+    icon: "nc-icon nc-controller-modern",
+    component: Events,
+    layout: "/admin",
+  },
 
   {
     path: "/tables",
@@ -21,26 +35,12 @@ var routes = [
     layout: "/admin",
   },
 
-  {
-    path: "/events",
-    name: "Events",
-    icon: "nc-icon nc-controller-modern",
-    component: Events,
-    layout: "/admin",
-  },
-  {
-    path: "/register",
-    name: "Register",
-    icon: "nc-icon nc-touch-id",
-    component: Register,
-    layout: "/admin",
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    icon: "nc-icon nc-diamond",
-    component: Icons,
-    layout: "/admin",
-  },
+  // {
+  //   path: "/icons",
+  //   name: "Icons",
+  //   icon: "nc-icon nc-diamond",
+  //   component: Icons,
+  //   layout: "/admin",
+  // },
 ];
 export default routes;

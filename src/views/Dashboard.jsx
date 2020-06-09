@@ -32,7 +32,7 @@ class Dashboard extends React.Component {
                     <Col md="8" xs="7">
                       <div className="numbers">
                         <p className="card-category">HDXTS</p>
-                        <CardTitle tag="p">07</CardTitle>
+                        <CardTitle tag="p">02</CardTitle>
                         <p />
                       </div>
                     </Col>
@@ -64,7 +64,7 @@ class Dashboard extends React.Component {
                     <Col md="8" xs="7">
                       <div className="numbers">
                         <p className="card-category">Scheduling</p>
-                        <CardTitle tag="p">05</CardTitle>
+                        <CardTitle tag="p">01</CardTitle>
                         <p />
                       </div>
                     </Col>
@@ -96,7 +96,7 @@ class Dashboard extends React.Component {
                     <Col md="8" xs="7">
                       <div className="numbers">
                         <p className="card-category">Regestration</p>
-                        <CardTitle tag="p">11</CardTitle>
+                        <CardTitle tag="p">02</CardTitle>
                         <p />
                       </div>
                     </Col>
@@ -133,7 +133,7 @@ class Dashboard extends React.Component {
                     <Col md="8" xs="7">
                       <div className="numbers">
                         <p className="card-category">CPA</p>
-                        <CardTitle tag="p">13</CardTitle>
+                        <CardTitle tag="p">01</CardTitle>
                         <p />
                       </div>
                     </Col>

@@ -104,6 +104,15 @@ class Tables extends React.Component {
                     />
                   </Col>
                 </FormGroup>
+                <FormGroup>
+                  <Label for="exampleTime">Time</Label>
+                  <Input
+                    type="time"
+                    name="time"
+                    id="exampleTime"
+                    placeholder="Time"
+                  />
+                </FormGroup>
                 <FormGroup row>
                   <Label for="pillarType" sm={2}>
                     Choose Pillar

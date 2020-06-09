@@ -14,7 +14,7 @@ class Footer extends React.Component {
             <nav className="footer-nav">
               <ul>
                 <li>
-                  <a href="#">Click me</a>
+                  <a href="www.cerner.com">Cerner</a>
                 </li>
               </ul>
             </nav>
